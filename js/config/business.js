@@ -30,5 +30,5 @@ export const business = {
     linkedin: '',
   },
   description:
-    'Crystal Cleaning Solutions provides professional home and office cleaning across Kerala — including Malappuram, Kozhikode, Palakkad, Thrissur, Wayanad, and Ernakulam. Deep cleaning, kitchen, bathroom, and commercial services for fresher, healthier spaces.',
+    'Reliable home and office cleaning across Kerala — careful work, clear communication, and spaces that feel genuinely fresh.',
 };
