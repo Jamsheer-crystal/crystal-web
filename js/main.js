@@ -22,6 +22,14 @@ function escapeHtml(value) {
     .replaceAll("'", '&#39;');
 }
 
+/** Prefix site assets with Vite base (needed for GitHub Pages `/crystal-web/`). */
+function assetUrl(path) {
+  if (!path) return '';
+  if (/^(https?:|data:|blob:)/i.test(path)) return path;
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}${String(path).replace(/^\//, '')}`;
+}
+
 function iconSvg(name) {
   const icons = {
     users: `<path stroke-linecap="round" stroke-linejoin="round" d="M15 19.5a3.75 3.75 0 00-7.5 0M12 12.75a3 3 0 100-6 3 3 0 000 6zM19.5 19.5a3 3 0 00-2.4-2.94M4.5 19.5a3 3 0 012.4-2.94M16.5 9.75a2.25 2.25 0 10-2.12-3"/>`,
@@ -114,7 +122,7 @@ function renderServices() {
       return `
       <article class="service-card group ${featuredClass}">
         <div class="service-media img-fallback">
-          <img src="${escapeHtml(service.image)}" alt="${escapeHtml(service.alt)}" loading="lazy" data-fallback class="h-full w-full object-cover transition duration-700 group-hover:scale-110" width="800" height="600" />
+          <img src="${escapeHtml(assetUrl(service.image))}" alt="${escapeHtml(service.alt)}" loading="lazy" data-fallback class="h-full w-full object-cover transition duration-700 group-hover:scale-110" width="800" height="600" />
         </div>
         <div class="service-body">
           <div class="service-meta">
@@ -165,7 +173,7 @@ function renderAbout() {
       .join('');
   }
   if (image) {
-    image.src = about.image;
+    image.src = assetUrl(about.image);
     image.alt = about.imageAlt;
   }
   const heading = document.getElementById('about-heading');
@@ -197,7 +205,7 @@ function renderGallery() {
     .map(
       (item) => `
       <figure class="gallery-tile group ${escapeHtml(item.className)}">
-        <img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy" data-fallback class="h-full w-full object-cover transition duration-700 group-hover:scale-110" width="800" height="600" />
+        <img src="${escapeHtml(assetUrl(item.src))}" alt="${escapeHtml(item.alt)}" loading="lazy" data-fallback class="h-full w-full object-cover transition duration-700 group-hover:scale-110" width="800" height="600" />
         <figcaption class="gallery-caption">
           <span>${escapeHtml(item.alt)}</span>
         </figcaption>
