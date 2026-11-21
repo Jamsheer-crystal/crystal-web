@@ -8,7 +8,7 @@ import {
   steps,
   testimonials,
 } from './config/content.js';
-import { bookingMessage, enquiryMessage, getWhatsAppUrl } from './lib/whatsapp.js';
+import { bookingMessage, enquiryMessage, getWhatsAppUrl, openWhatsApp } from './lib/whatsapp.js';
 
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -421,8 +421,7 @@ function setupContactForm() {
     const { valid, values } = validate();
     if (!valid) return;
 
-    const url = getWhatsAppUrl(enquiryMessage(values));
-    window.open(url, '_blank', 'noopener,noreferrer');
+    openWhatsApp(enquiryMessage(values));
   });
 }
 
