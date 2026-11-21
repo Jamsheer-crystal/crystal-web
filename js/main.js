@@ -441,6 +441,7 @@ function injectStructuredData() {
     logo: assetUrl(business.logo),
     address: {
       '@type': 'PostalAddress',
+      addressLocality: 'Perinthalmanna',
       addressRegion: 'Kerala',
       addressCountry: 'IN',
       streetAddress: business.address,

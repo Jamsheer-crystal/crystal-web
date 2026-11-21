@@ -14,8 +14,9 @@ export const business = {
   whatsappNumber: '919567616118',
   // REPLACE ME when a real inbox is ready
   email: 'hello@example.com',
-  address: 'Kerala, India',
+  address: 'Perinthalmanna, Kerala, India',
   serviceAreas: [
+    'Perinthalmanna',
     'Malappuram',
     'Kozhikode',
     'Palakkad',
