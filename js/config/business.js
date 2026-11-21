@@ -4,6 +4,8 @@
  */
 export const business = {
   name: 'Crystal Cleaning Solutions',
+  // Live site URL (update again when you add a custom domain)
+  siteUrl: 'https://mubashir-akz.github.io/crystal-web/',
   // REPLACE ME
   tagline: 'A cleaner space. A better feeling.',
   logo: '/images/logo.png',
@@ -26,5 +28,5 @@ export const business = {
   },
   // REPLACE ME
   description:
-    'Crystal Cleaning Solutions provides reliable home and commercial cleaning services focused on healthier, fresher spaces.',
+    'Crystal Cleaning Solutions provides professional home and office cleaning services. Reliable deep cleaning, kitchen, bathroom, and commercial cleaning for fresher, healthier spaces.',
 };

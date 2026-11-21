@@ -427,13 +427,18 @@ function setupContactForm() {
 }
 
 function injectStructuredData() {
+  const siteUrl = business.siteUrl || `${window.location.origin}${import.meta.env.BASE_URL || '/'}`;
   const data = {
     '@context': 'https://schema.org',
     '@type': 'CleaningService',
     name: business.name,
+    alternateName: 'Crystal Cleaning',
     description: business.description,
+    url: siteUrl,
     telephone: business.phoneDisplay,
     email: business.email,
+    image: assetUrl(business.logo),
+    logo: assetUrl(business.logo),
     address: {
       '@type': 'PostalAddress',
       streetAddress: business.address,
@@ -442,7 +447,7 @@ function injectStructuredData() {
       '@type': 'Place',
       name: area,
     })),
-    url: typeof window !== 'undefined' ? window.location.origin : undefined,
+    sameAs: Object.values(business.social || {}).filter(Boolean),
   };
 
   const script = document.createElement('script');
