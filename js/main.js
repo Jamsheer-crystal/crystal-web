@@ -441,10 +441,12 @@ function injectStructuredData() {
     logo: assetUrl(business.logo),
     address: {
       '@type': 'PostalAddress',
+      addressRegion: 'Kerala',
+      addressCountry: 'IN',
       streetAddress: business.address,
     },
     areaServed: business.serviceAreas.map((area) => ({
-      '@type': 'Place',
+      '@type': 'AdministrativeArea',
       name: area,
     })),
     sameAs: Object.values(business.social || {}).filter(Boolean),
