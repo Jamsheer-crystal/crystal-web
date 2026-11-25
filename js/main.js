@@ -446,6 +446,7 @@ function injectStructuredData() {
       'Cleaning solution in Perinthalmanna, Karinkallathani, and Malappuram. Home and office cleaning by Crystal Cleaning Solutions.',
     url: siteUrl,
     telephone: phone,
+    email: business.email,
     image: `${origin}/images/logo.png`,
     logo: `${origin}/images/logo.png`,
     priceRange: '$$',

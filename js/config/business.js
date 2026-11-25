@@ -7,12 +7,11 @@ export const business = {
   tagline: 'A cleaner space. A better feeling.',
   logo: '/images/logo.png',
   // India mobile from client flyer
-  phoneDisplay: '95 67 61 61 18',
+  phoneDisplay: '+91 95 67 61 61 18',
   phoneHref: 'tel:+919567616118',
   // WhatsApp: country code + number, digits only
   whatsappNumber: '919567616118',
-  // REPLACE ME when a real inbox is ready
-  email: 'hello@example.com',
+  email: 'info@crystalcleaningsolutions.in',
   address: 'Perinthalmanna, Kerala, India',
   serviceAreas: [
     'Perinthalmanna',
