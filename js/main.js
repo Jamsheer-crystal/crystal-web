@@ -426,36 +426,98 @@ function setupContactForm() {
 }
 
 function injectStructuredData() {
-  const siteUrl = business.siteUrl || `${window.location.origin}${import.meta.env.BASE_URL || '/'}`;
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'CleaningService',
+  const siteUrl = business.siteUrl || 'https://crystalcleaningsolutions.in/';
+  const origin = siteUrl.replace(/\/$/, '');
+  const phone = (business.phoneHref || '').replace(/^tel:/, '') || '+919567616118';
+  const sameAs = Object.values(business.social || {}).filter(Boolean);
+  const areas = ['Karinkallathani', ...business.serviceAreas.filter((area) => area !== 'Karinkallathani')];
+
+  const businessNode = {
+    '@type': ['CleaningService', 'LocalBusiness'],
+    '@id': `${origin}/#business`,
     name: business.name,
-    alternateName: 'Crystal Cleaning',
-    description: business.description,
+    alternateName: [
+      'Crystal Cleaning',
+      'Cleaning Solution Perinthalmanna',
+      'Cleaning Solution Karinkallathani',
+      'Crystal Cleaning Malappuram',
+    ],
+    description:
+      'Cleaning solution in Perinthalmanna, Karinkallathani, and Malappuram. Home and office cleaning by Crystal Cleaning Solutions.',
     url: siteUrl,
-    telephone: business.phoneDisplay,
-    email: business.email,
-    image: assetUrl(business.logo),
-    logo: assetUrl(business.logo),
+    telephone: phone,
+    image: `${origin}/images/logo.png`,
+    logo: `${origin}/images/logo.png`,
+    priceRange: '$$',
+    currenciesAccepted: 'INR',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Perinthalmanna',
       addressRegion: 'Kerala',
+      postalCode: '679322',
       addressCountry: 'IN',
-      streetAddress: business.address,
     },
-    areaServed: business.serviceAreas.map((area) => ({
-      '@type': 'AdministrativeArea',
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 10.9768,
+      longitude: 76.2254,
+    },
+    areaServed: areas.map((area) => ({
+      '@type': area === 'Karinkallathani' ? 'Place' : area === 'Perinthalmanna' ? 'City' : 'AdministrativeArea',
       name: area,
     })),
-    sameAs: Object.values(business.social || {}).filter(Boolean),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Cleaning services',
+      itemListElement: services.map((service) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: `${service.title} in Perinthalmanna`,
+          description: service.description,
+          areaServed: ['Perinthalmanna', 'Karinkallathani', 'Malappuram'],
+        },
+      })),
+    },
   };
 
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
+  if (sameAs.length) businessNode.sameAs = sameAs;
+
+  const data = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      businessNode,
+      {
+        '@type': 'WebSite',
+        '@id': `${origin}/#website`,
+        url: siteUrl,
+        name: business.name,
+        inLanguage: 'en-IN',
+        publisher: { '@id': `${origin}/#business` },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${origin}/#faq`,
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
+  let script = document.getElementById('ld-json');
+  if (!script) {
+    script = document.createElement('script');
+    script.id = 'ld-json';
+    script.type = 'application/ld+json';
+    document.head.appendChild(script);
+  }
   script.textContent = JSON.stringify(data);
-  document.head.appendChild(script);
 }
 
 fillBrand();

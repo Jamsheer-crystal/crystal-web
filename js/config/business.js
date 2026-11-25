@@ -3,8 +3,7 @@
  */
 export const business = {
   name: 'Crystal Cleaning Solutions',
-  // Live site URL (update again when you add a custom domain)
-  siteUrl: 'https://mubashir-akz.github.io/crystal-web/',
+  siteUrl: 'https://crystalcleaningsolutions.in/',
   tagline: 'A cleaner space. A better feeling.',
   logo: '/images/logo.png',
   // India mobile from client flyer

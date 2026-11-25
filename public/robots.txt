@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mubashir-akz.github.io/crystal-web/sitemap.xml
+Sitemap: https://crystalcleaningsolutions.in/sitemap.xml
