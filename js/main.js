@@ -22,7 +22,7 @@ function escapeHtml(value) {
     .replaceAll("'", '&#39;');
 }
 
-/** Prefix site assets with Vite base (needed for GitHub Pages `/crystal-web/`). */
+/** Prefix site assets with Vite base (works for Hostinger root and GitHub Pages). */
 function assetUrl(path) {
   if (!path) return '';
   if (/^(https?:|data:|blob:)/i.test(path)) return path;
