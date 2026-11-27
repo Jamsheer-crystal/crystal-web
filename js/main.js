@@ -155,7 +155,7 @@ function renderFeatures() {
           <span class="why-card-number">${number}</span>
           <span class="why-card-icon" aria-hidden="true">${iconSvg(feature.icon)}</span>
         </div>
-        <span class="why-card-tag">${escapeHtml(feature.tag || 'Crystal')}</span>
+        <span class="why-card-tag">${escapeHtml(feature.tag || 'Basmala')}</span>
         <h3 class="why-card-title">${escapeHtml(feature.title)}</h3>
         <p class="why-card-copy">${escapeHtml(feature.description)}</p>
         <div class="why-card-line" aria-hidden="true"></div>
@@ -437,18 +437,18 @@ function injectStructuredData() {
     '@id': `${origin}/#business`,
     name: business.name,
     alternateName: [
-      'Crystal Cleaning',
+      'Basmala Cleaning',
       'Cleaning Solution Perinthalmanna',
       'Cleaning Solution Karinkallathani',
-      'Crystal Cleaning Malappuram',
+      'Basmala Cleaning Malappuram',
     ],
     description:
-      'Cleaning solution in Perinthalmanna, Karinkallathani, and Malappuram. Home and office cleaning by Crystal Cleaning Solutions.',
+      'Cleaning solution in Perinthalmanna, Karinkallathani, and Malappuram. Home and office cleaning by Basmala Cleaning Solutions.',
     url: siteUrl,
     telephone: phone,
     email: business.email,
     image: `${origin}/images/logo.png`,
-    logo: `${origin}/images/logo.png`,
+    logo: `${origin}/images/logo-stacked.png`,
     priceRange: '$$',
     currenciesAccepted: 'INR',
     address: {

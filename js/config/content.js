@@ -206,7 +206,7 @@ export const faqs = [
 export const about = {
   heading: 'We Make Clean Spaces Feel Better.',
   paragraphs: [
-    'Crystal Cleaning Solutions was created for people who want a dependable cleaning partner — not just a quick tidy, but a space that feels calmer, healthier, and ready to enjoy.',
+    'Basmala Cleaning Solutions was created for people who want a dependable cleaning partner — not just a quick tidy, but a space that feels calmer, healthier, and ready to enjoy.',
     'We focus on careful workmanship for homes and businesses: clear communication, thoughtful routines, and results you can see and feel when you walk through the door.',
     'Whether you need regular upkeep, a deeper refresh, or help preparing a property for its next chapter, our team approaches every visit with the same quiet attention to detail.',
   ],

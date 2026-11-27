@@ -2,7 +2,7 @@
  * Central business configuration.
  */
 export const business = {
-  name: 'Crystal Cleaning Solutions',
+  name: 'Basmala Cleaning Solutions',
   siteUrl: 'https://crystalcleaningsolutions.in/',
   tagline: 'A cleaner space. A better feeling.',
   logo: '/images/logo.png',

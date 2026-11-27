@@ -1,8 +1,11 @@
-# Crystal Cleaning Solutions
+# Basmala Cleaning Solutions
 
-Premium static marketing website for Crystal Cleaning Solutions. Built with HTML, CSS (Tailwind CSS v4), and vanilla JavaScript. No React, no backend.
+Premium static marketing website for Basmala Cleaning Solutions. Built with HTML, CSS (Tailwind CSS v4), and vanilla JavaScript. No React, no backend.
 
-Brand logo: [`public/images/logo.png`](public/images/logo.png)
+Brand assets:
+- Horizontal logo (header, footer, About/Why sections, social previews): [`public/images/logo.png`](public/images/logo.png)
+- Square logo (structured data): [`public/images/logo-stacked.png`](public/images/logo-stacked.png)
+- Favicon and app icon: [`public/favicon.ico`](public/favicon.ico), [`public/favicon.png`](public/favicon.png), [`public/apple-touch-icon.png`](public/apple-touch-icon.png)
 
 ## Run locally
 

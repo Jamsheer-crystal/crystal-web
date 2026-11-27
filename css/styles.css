@@ -511,8 +511,17 @@
   .why-brand-chip {
     display: inline-flex;
     border-radius: 0.9rem;
-    background: white;
-    padding: 0.45rem 0.7rem;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Dark brand logo sits in its own navy panel so it reads on light and dark sections */
+  .brand-badge {
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #020b1c;
+    box-shadow: 0 0 0 1px rgba(7, 17, 29, 0.08);
   }
 
   .why-aside-text {
