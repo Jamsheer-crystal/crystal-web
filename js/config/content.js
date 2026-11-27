@@ -12,7 +12,7 @@ export const services = [
     id: 'deep-cleaning',
     title: 'Deep Cleaning',
     tag: 'Detail work',
-    description: 'Detailed cleaning for those areas that need extra attention.',
+    description: 'Thorough deep cleaning services and solutions for homes, offices, kitchens, bathrooms, and post-renovation spaces.',
     image: '/images/service-deep.jpg',
     alt: 'Detail cleaning of a modern kitchen surface',
   },
@@ -52,7 +52,7 @@ export const services = [
     id: 'move-cleaning',
     title: 'Move-in / Move-out Cleaning',
     tag: 'Transition',
-    description: 'Get your property ready for its next chapter.',
+    description: 'Complete move-in, move-out, and post-construction deep cleaning to get your property ready for its next chapter.',
     image: '/images/service-move.jpg',
     alt: 'Empty bright apartment ready after a thorough clean',
   },
@@ -152,7 +152,17 @@ export const faqs = [
   {
     question: 'What cleaning services do you provide?',
     answer:
-      'We offer home cleaning, deep cleaning, office cleaning, kitchen and bathroom cleaning, sofa and upholstery care, and move-in or move-out cleaning.',
+      'We offer home and veedu cleaning, deep cleaning services, office and commercial cleaning, kitchen and bathroom deep cleaning, sofa and upholstery care, and move-in, move-out, or post-construction cleaning.',
+  },
+  {
+    question: 'What is included in your deep cleaning service?',
+    answer:
+      'Our deep cleaning solution covers areas routine cleaning skips: floors, corners, skirting boards, windows, fans, kitchen degreasing and cabinet exteriors, bathroom descaling and sanitization, and high-touch surfaces for homes and offices.',
+  },
+  {
+    question: 'Which areas in Kerala do you cover for deep cleaning and home cleaning?',
+    answer:
+      'Basmala Cleaning Solutions provides deep cleaning services and home or office cleaning across Perinthalmanna (including Karinkallathani), Malappuram, Kozhikode (Calicut), Palakkad, Thrissur, Wayanad, and Ernakulam (Kochi).',
   },
   {
     question: 'How can I book a cleaning service?',

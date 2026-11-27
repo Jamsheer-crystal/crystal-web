@@ -401,7 +401,18 @@ function injectStructuredData() {
   const origin = siteUrl.replace(/\/$/, '');
   const phone = (business.phoneHref || '').replace(/^tel:/, '') || '+919567616118';
   const sameAs = Object.values(business.social || {}).filter(Boolean);
-  const areas = ['Karinkallathani', ...business.serviceAreas.filter((area) => area !== 'Karinkallathani')];
+  const serviceLocations = [
+    'Perinthalmanna',
+    'Karinkallathani',
+    'Malappuram',
+    'Kozhikode',
+    'Calicut',
+    'Palakkad',
+    'Thrissur',
+    'Wayanad',
+    'Ernakulam',
+    'Kochi',
+  ];
 
   const businessNode = {
     '@type': ['CleaningService', 'LocalBusiness'],
@@ -409,12 +420,14 @@ function injectStructuredData() {
     name: business.name,
     alternateName: [
       'Basmala Cleaning',
+      'Basmala Deep Cleaning Solutions',
       'Cleaning Solution Perinthalmanna',
-      'Cleaning Solution Karinkallathani',
-      'Basmala Cleaning Malappuram',
+      'Deep Cleaning Services Perinthalmanna',
+      'Deep Cleaning Solution Perinthalmanna',
+      'Deep Cleaning Services Kerala',
     ],
     description:
-      'Cleaning solution in Perinthalmanna, Karinkallathani, and Malappuram. Home and office cleaning by Basmala Cleaning Solutions.',
+      'Professional deep cleaning services and cleaning solutions for homes, flats, villas, and offices across Perinthalmanna, Karinkallathani, Malappuram, Kozhikode (Calicut), Palakkad, Thrissur, Wayanad, and Ernakulam (Kochi), Kerala.',
     url: siteUrl,
     telephone: phone,
     email: business.email,
@@ -434,20 +447,29 @@ function injectStructuredData() {
       latitude: 10.9768,
       longitude: 76.2254,
     },
-    areaServed: areas.map((area) => ({
-      '@type': area === 'Karinkallathani' ? 'Place' : area === 'Perinthalmanna' ? 'City' : 'AdministrativeArea',
-      name: area,
-    })),
+    areaServed: [
+      ...serviceLocations.map((area) => ({
+        '@type':
+          area === 'Karinkallathani'
+            ? 'Place'
+            : area === 'Perinthalmanna' || area === 'Calicut' || area === 'Kochi'
+              ? 'City'
+              : 'AdministrativeArea',
+        name: area,
+      })),
+      { '@type': 'State', name: 'Kerala' },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Cleaning services',
+      name: 'Deep Cleaning & Cleaning Services in Kerala',
       itemListElement: services.map((service) => ({
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: `${service.title} in Perinthalmanna`,
+          name: service.id === 'deep-cleaning' ? 'Deep Cleaning Services' : service.title,
+          serviceType: service.title,
           description: service.description,
-          areaServed: ['Perinthalmanna', 'Karinkallathani', 'Malappuram'],
+          areaServed: serviceLocations,
         },
       })),
     },
