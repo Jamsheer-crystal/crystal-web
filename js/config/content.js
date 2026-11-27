@@ -148,28 +148,6 @@ export const gallery = [
   },
 ];
 
-/** Sample placeholders only — replace with real customer feedback. */
-export const testimonials = [
-  {
-    quote:
-      'Our apartment felt lighter after the clean — every surface looked cared for and the whole home smelled fresh.',
-    name: 'Sample Customer A',
-    detail: 'Home Cleaning',
-  },
-  {
-    quote:
-      'The team was thoughtful, on time, and left our office looking ready for a productive week ahead.',
-    name: 'Sample Customer B',
-    detail: 'Office Cleaning',
-  },
-  {
-    quote:
-      'Move-out cleaning took a big task off our list. The place looked presentation-ready when we handed over the keys.',
-    name: 'Sample Customer C',
-    detail: 'Move-out Cleaning',
-  },
-];
-
 export const faqs = [
   {
     question: 'What cleaning services do you provide?',

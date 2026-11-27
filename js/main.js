@@ -6,7 +6,6 @@ import {
   gallery,
   services,
   steps,
-  testimonials,
 } from './config/content.js';
 import { bookingMessage, enquiryMessage, getWhatsAppUrl, openWhatsApp } from './lib/whatsapp.js';
 
@@ -211,34 +210,6 @@ function renderGallery() {
         </figcaption>
       </figure>`,
     )
-    .join('');
-}
-
-function renderTestimonials() {
-  const grid = document.getElementById('testimonials-grid');
-  if (!grid) return;
-
-  grid.innerHTML = testimonials
-    .map((item) => {
-      const initials = item.name
-        .split(' ')
-        .filter(Boolean)
-        .slice(0, 2)
-        .map((part) => part[0])
-        .join('')
-        .toUpperCase();
-      return `
-      <blockquote class="quote-card">
-        <p class="quote-text">“${escapeHtml(item.quote)}”</p>
-        <footer class="quote-footer">
-          <span class="quote-avatar" aria-hidden="true">${escapeHtml(initials)}</span>
-          <div>
-            <cite class="quote-name">${escapeHtml(item.name)}</cite>
-            <p class="quote-detail">${escapeHtml(item.detail)}</p>
-          </div>
-        </footer>
-      </blockquote>`;
-    })
     .join('');
 }
 
@@ -527,7 +498,6 @@ renderFeatures();
 renderAbout();
 renderSteps();
 renderGallery();
-renderTestimonials();
 renderFaqs();
 renderServiceOptions();
 renderFooterServices();

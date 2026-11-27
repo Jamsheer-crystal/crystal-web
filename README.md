@@ -39,7 +39,7 @@ Edit [`js/config/business.js`](js/config/business.js):
 | `social` | Facebook / Instagram / LinkedIn URLs (empty hides the link) |
 | `description` | Short company blurb |
 
-Page copy (services, FAQ, testimonials, gallery captions, about text) lives in [`js/config/content.js`](js/config/content.js).
+Page copy (services, FAQ, gallery captions, about text) lives in [`js/config/content.js`](js/config/content.js).
 
 ## Replace images
 
@@ -71,5 +71,4 @@ All photos are royalty-free Unsplash images downloaded into `public/images/`:
 ## Notes
 
 - Contact form validation runs in the browser and opens a prefilled WhatsApp chat.
-- Testimonials are sample placeholders, clearly labeled — replace with real feedback before launch.
 - Placeholder phone, email, address, and service areas must be replaced before publishing.
