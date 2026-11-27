@@ -426,7 +426,7 @@ function setupContactForm() {
 }
 
 function injectStructuredData() {
-  const siteUrl = business.siteUrl || 'https://crystalcleaningsolutions.in/';
+  const siteUrl = business.siteUrl || 'https://basmalacleaningsolutions.in/';
   const origin = siteUrl.replace(/\/$/, '');
   const phone = (business.phoneHref || '').replace(/^tel:/, '') || '+919567616118';
   const sameAs = Object.values(business.social || {}).filter(Boolean);

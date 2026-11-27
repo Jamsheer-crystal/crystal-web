@@ -3,7 +3,7 @@
  */
 export const business = {
   name: 'Basmala Cleaning Solutions',
-  siteUrl: 'https://crystalcleaningsolutions.in/',
+  siteUrl: 'https://basmalacleaningsolutions.in/',
   tagline: 'A cleaner space. A better feeling.',
   logo: '/images/logo.png',
   // India mobile from client flyer
@@ -11,7 +11,7 @@ export const business = {
   phoneHref: 'tel:+919567616118',
   // WhatsApp: country code + number, digits only
   whatsappNumber: '919567616118',
-  email: 'info@crystalcleaningsolutions.in',
+  email: 'info@basmalacleaningsolutions.in',
   address: 'Perinthalmanna, Kerala, India',
   serviceAreas: [
     'Perinthalmanna',
