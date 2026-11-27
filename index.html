@@ -96,33 +96,33 @@
     Skip to content
   </a>
 
-  <header id="site-header" class="site-header sticky top-0 z-50">
-    <div class="container-site flex h-[4.25rem] items-center justify-between gap-4 sm:h-20 lg:h-[5.25rem]">
-      <a href="#home" class="site-logo shrink-0" aria-label="Basmala Cleaning Solutions home">
-        <img src="/images/logo-header.png" alt="Basmala Cleaning Solutions"
-          class="h-9 w-auto object-contain sm:h-10 lg:h-11" width="280" height="93" />
-      </a>
+  <header id="site-header" class="site-header site-header--overlay">
+    <div class="overlay-bar">
+      <div class="overlay-tab overlay-tab--logo">
+        <a href="#home" class="site-logo" aria-label="Basmala Cleaning Solutions home">
+          <img src="/images/logo-header.png" alt="Basmala Cleaning Solutions"
+            class="h-10 w-auto object-contain sm:h-11 lg:h-14" width="280" height="93" />
+        </a>
+      </div>
 
-      <nav class="hidden flex-1 items-center justify-center gap-6 xl:gap-8 lg:flex" aria-label="Primary">
-        <a data-nav-link href="#home" class="nav-link">Home</a>
-        <a data-nav-link href="#about" class="nav-link">About</a>
-        <a data-nav-link href="#services" class="nav-link">Services</a>
-        <a data-nav-link href="#gallery" class="nav-link">Gallery</a>
-        <a data-nav-link href="#contact" class="nav-link">Contact</a>
+      <nav class="overlay-nav" aria-label="Primary">
+        <a data-nav-link href="#home" class="overlay-nav-link">Home</a>
+        <a data-nav-link href="#services" class="overlay-nav-link">Services</a>
+        <a data-nav-link href="#how-it-works" class="overlay-nav-link">Our Process</a>
+        <a data-nav-link href="#about" class="overlay-nav-link">About Us</a>
+        <a data-nav-link href="#faq" class="overlay-nav-link">FAQ</a>
       </nav>
 
-      <div class="flex shrink-0 items-center gap-2.5">
-        <a data-phone-href href="tel:+919567616118" class="header-icon-btn header-icon-btn--phone hidden sm:inline-flex"
-          aria-label="Call us">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" />
+      <div class="overlay-tab overlay-tab--actions">
+        <a data-whatsapp-chat href="#" class="contact-btn contact-btn--wa" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.15 6.34 2.15 11.7c0 1.92.52 3.7 1.44 5.26L2 22l5.25-1.55a10.1 10.1 0 0 0 4.79 1.2h.01c5.46 0 9.89-4.34 9.89-9.7C21.94 6.34 17.5 2 12.04 2zm5.76 13.98c-.24.68-1.4 1.25-1.93 1.33-.5.07-1.12.1-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18 0 .41-.07.64.49.24.58.8 2 .87 2.14.07.15.12.32.02.51-.1.19-.14.32-.29.49-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.17.28.74 1.22 1.59 1.97 1.1.97 2.02 1.27 2.3 1.41.29.15.45.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.95.93.29.14.48.22.55.34.07.12.07.7-.17 1.38z" />
           </svg>
+          <span class="contact-btn-label">WhatsApp</span>
         </a>
-        <a data-whatsapp-chat href="#" class="header-icon-btn header-icon-btn--wa" aria-label="Chat on WhatsApp">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M12.04 2C6.58 2 2.15 6.34 2.15 11.7c0 1.92.52 3.7 1.44 5.26L2 22l5.25-1.55a10.1 10.1 0 0 0 4.79 1.2h.01c5.46 0 9.89-4.34 9.89-9.7C21.94 6.34 17.5 2 12.04 2zm5.76 13.98c-.24.68-1.4 1.25-1.93 1.33-.5.07-1.12.1-1.81-.11-.42-.13-.95-.31-1.64-.6-2.88-1.24-4.76-4.13-4.9-4.32-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18 0 .41-.07.64.49.24.58.8 2 .87 2.14.07.15.12.32.02.51-.1.19-.14.32-.29.49-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.17.28.74 1.22 1.59 1.97 1.1.97 2.02 1.27 2.3 1.41.29.15.45.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.95.93.29.14.48.22.55.34.07.12.07.7-.17 1.38z" />
+        <a data-phone-href href="tel:+919567616118" class="contact-btn contact-btn--call" aria-label="Call us">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" />
           </svg>
         </a>
         <button id="menu-toggle" type="button"
@@ -136,17 +136,19 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="hidden border-t border-black/5 bg-white lg:hidden" role="dialog"
+    <div id="mobile-menu" class="relative z-10 hidden border-t border-black/5 bg-white lg:hidden" role="dialog"
       aria-label="Mobile navigation">
       <nav class="container-site flex flex-col gap-1 py-4" aria-label="Mobile">
         <a data-nav-link href="#home"
           class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">Home</a>
-        <a data-nav-link href="#about"
-          class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">About</a>
         <a data-nav-link href="#services"
           class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">Services</a>
-        <a data-nav-link href="#gallery"
-          class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">Gallery</a>
+        <a data-nav-link href="#how-it-works"
+          class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">Our Process</a>
+        <a data-nav-link href="#about"
+          class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">About Us</a>
+        <a data-nav-link href="#faq"
+          class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">FAQ</a>
         <a data-nav-link href="#contact"
           class="rounded-xl px-4 py-3 text-base font-semibold text-navy hover:bg-mist">Contact</a>
         <a data-whatsapp-book href="#" class="btn-primary mt-2 w-full">Book a Cleaning</a>
@@ -157,23 +159,61 @@
   <main id="main">
     <!-- Hero -->
     <section id="home" class="hero-showcase">
-      <div class="hero-bg" aria-hidden="true">
-        <img src="/images/hero-composite.jpg" alt="" width="1600" height="1000" fetchpriority="high" />
-      </div>
-      <div class="hero-wash" aria-hidden="true"></div>
-      <div class="container-site relative z-10">
-        <div class="hero-showcase-grid">
+      <div class="hero-card">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="/images/hero-interior.jpg" alt="" width="1600" height="900" fetchpriority="high" />
+        </div>
+        <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-card-inner">
           <div class="hero-copy">
+            <p class="hero-eyebrow">Professional cleaning services</p>
             <h1 class="hero-title">
-              Clean Spaces Bring
-              <span>Peace of Mind</span>
+              A Cleaner Space
+              <span>A Better Feeling</span>
             </h1>
-            <p class="hero-subtitle">Every Time Guaranteed.</p>
-            <div class="hero-actions">
-              <a data-whatsapp-book href="#" class="btn-primary">Book a Cleaning</a>
-              <a href="#services" class="btn-secondary">Explore Services</a>
-            </div>
+            <p class="hero-subtitle">
+              Trusted cleaning services for homes and offices across Kerala. Fresh spaces, healthier living.
+            </p>
+            <a data-whatsapp-book href="#" class="btn-forest">
+              Book a Cleaning
+              <span class="btn-forest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8" />
+                </svg>
+              </span>
+            </a>
           </div>
+          <ul class="hero-stats" aria-label="Basmala at a glance">
+            <li class="hero-stat">
+              <svg class="hero-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.750 12l-2.846.813a4.5 4.5 0 00-3.090 3.090zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+              </svg>
+              <span>
+                <span class="hero-stat-title">Homes &amp; Offices</span>
+                <span class="hero-stat-sub">Cleaned with care</span>
+              </span>
+            </li>
+            <li class="hero-stat">
+              <svg class="hero-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
+              </svg>
+              <span>
+                <span class="hero-stat-title">Trusted</span>
+                <span class="hero-stat-sub">Professionals</span>
+              </span>
+            </li>
+            <li class="hero-stat">
+              <svg class="hero-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              <span>
+                <span class="hero-stat-title">7 Districts</span>
+                <span class="hero-stat-sub">Across Kerala</span>
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -302,7 +342,6 @@
       </div>
     </section>
 
-    <!-- Final CTA -->
     <!-- Service areas -->
     <section id="service-areas" class="section overflow-hidden">
       <div class="container-site">
